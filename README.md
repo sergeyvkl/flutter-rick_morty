@@ -12,30 +12,6 @@ SharedPreferences или Hive для кеширования данных пер�
 Providerдля управления состоянием<br>
 
 
-Структура проекта:<br>
-
-rick_morty/<br>
-├── models/<br>
-│	├── character.dart<br>
-├── services/<br>
-│	├── api_service.dart<br>
-│   ├── database_service.dart<br>
-│   └── cache_service.dart<br>
-├── repositories/<br>
-│   └── character_repository.dart<br>
-├── providers/<br>
-│   ├── character_provider.dart<br>
-│   └── favorites_provider.dart<br>
-├── screens/<br>
-│   ├── home_screen.dart<br>
-│   ├── favorites_screen.dart<br>
-│   └── character_detail_screen.dart<br>
-├── widgets/<br>
-│   ├── character_card.dart<br>
-│   ├── loading_indicator.dart<br>
-│   └── error_widget.dart<br>
-└── main.dart<br>
-
 Особенности реализации<br>
 
 Кеширование изображений:<br>
