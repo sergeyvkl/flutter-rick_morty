@@ -1,70 +1,72 @@
-Flutter приложение "Рик и Морти" с избранными персонажами
+Flutter приложение "Рик и Морти" с избранными персонажами<br>
 
-План разработки мобильного приложения на Flutter для работы с персонажами "Рик и Морти".
+План разработки мобильного приложения на Flutter для работы с персонажами "Рик и Морти".<br>
 
-Архитектура приложения
-Стек технологий:
-Flutter SDK
-Dart
-HTTP для API запросов
-SQLite (через sqflite) для локального хранения избранного
-SharedPreferences или Hive для кеширования данных персонажей
-Providerдля управления состоянием
+Архитектура приложения<br>
+Стек технологий:<br>
+Flutter SDK<br>
+Dart<br>
+HTTP для API запросов<br>
+SQLite (через sqflite) для локального хранения избранного<br>
+SharedPreferences или Hive для кеширования данных персонажей<br>
+Providerдля управления состоянием<br>
 
-Структура проекта:\n
-rick_morty/
-├── models/
-│   ├── character.dart
-├── services/
-│   ├── api_service.dart
-│   ├── database_service.dart
-│   └── cache_service.dart
-├── repositories/
-│   └── character_repository.dart
-├── providers/
-│   ├── character_provider.dart
-│   └── favorites_provider.dart
-├── screens/
-│   ├── home_screen.dart
-│   ├── favorites_screen.dart
-│   └── character_detail_screen.dart
-├── widgets/
-│   ├── character_card.dart
-│   ├── loading_indicator.dart
-│   └── error_widget.dart
-└── main.dart
 
-Особенности реализации
+Структура проекта:<br>
 
-Кеширование изображений:
-    Используется CachedNetworkImage для загрузки и кеширования изображений  
-    оказываются плейсхолдеры во время загрузки
+rick_morty/<br>
+├── models/<br>
+│	├── character.dart<br>
+├── services/<br>
+│	├── api_service.dart<br>
+│   ├── database_service.dart<br>
+│   └── cache_service.dart<br>
+├── repositories/<br>
+│   └── character_repository.dart<br>
+├── providers/<br>
+│   ├── character_provider.dart<br>
+│   └── favorites_provider.dart<br>
+├── screens/<br>
+│   ├── home_screen.dart<br>
+│   ├── favorites_screen.dart<br>
+│   └── character_detail_screen.dart<br>
+├── widgets/<br>
+│   ├── character_card.dart<br>
+│   ├── loading_indicator.dart<br>
+│   └── error_widget.dart<br>
+└── main.dart<br>
 
-Оффлайн-режим:
-    Все данные персонажей сохраняются в SQLite
-    При отсутствии интернета показываются кешированные данные
-    Визуальный индикатор оффлайн-режима
+Особенности реализации<br>
 
-Поиск персонажей:
-    Поиск по имени через API
-    Локальный поиск в кешированных данных при отсутствии интернета
-    Очистка поиска по кнопке
+Кеширование изображений:<br>
+    Используется CachedNetworkImage для загрузки и кеширования изображений <br>
+    оказываются плейсхолдеры во время загрузки<br>
+
+Оффлайн-режим:<br>
+    Все данные персонажей сохраняются в SQLite<br>
+    При отсутствии интернета показываются кешированные данные<br>
+    Визуальный индикатор оффлайн-режима<br>
+
+Поиск персонажей:<br>
+    Поиск по имени через API<br>
+    Локальный поиск в кешированных данных при отсутствии интернета<br>
+    Очистка поиска по кнопке<br>
 
 Анимации:
-    Анимации списка с помощью flutter_staggered_animations
-    Плавные переходы между экранами
-    Анимация добавления/удаления из избранного
-    Hero-анимация для изображений персонажей
+    Анимации списка с помощью flutter_staggered_animations<br>
+    Плавные переходы между экранами<br>
+    Анимация добавления/удаления из избранного<br>
+    Hero-анимация для изображений персонажей<br>
 
-Сортировка избранного:
-    По имени
-    По статусу
+Сортировка избранного:<br>
+    По имени<br>
+    По статусу<br>
 
-Индикаторы загрузки:
-    Shimmer-эффект для плейсхолдеров
-    Индикатор подгрузки новых элементов
-    Pull-to-refresh для обновления данных
+Индикаторы загрузки:<br>
+    Shimmer-эффект для плейсхолдеров<br>
+    Индикатор подгрузки новых элементов<br>
+    Pull-to-refresh для обновления данных<br>
 
-Управление состоянием:
-    Используется Provider для эффективного управления состоянием
-    Разделение на CharacterProvider и FavoritesProvider
+Управление состоянием:<br>
+    Используется Provider для эффективного управления состоянием<br>
+    Разделение на CharacterProvider и FavoritesProvider<br>
